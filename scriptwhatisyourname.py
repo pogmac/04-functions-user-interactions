@@ -15,19 +15,28 @@ if __name__ == "__main__":
     print("Witaj: ***%s!***" % text)
 """
 #v2
+
 """
 def customized_hello(text):
-    
-    #    Prints hello, based on arguments passed
-    #    Arguments:
-    #    first_name,
-    #    last_name
-    
-    print("Hello %s!" % (text))
 
+#        Prints hello, based on arguments passed
+#        Arguments:
+#        first_name,
+#        last_name
+
+    print("Hello %s!" % (text))
+    
 if __name__ == "__main__":
     text = input("Wpisz swóje imię i nazwisko:")
     customized_hello(text)
+"""
+# v3 Gdybyśmy funkcję tę zamknęli w pliku, to stworzylibyśmy skrypt.
+"""
+def customized_hello(first_name, last_name):
+    print("Hello %s %s!" % (first_name, last_name))
+
+if __name__ == "__main__":
+    customized_hello("John", "Cleese")
 """
 
 #v3 Moduł sys ma przydatną zmienną argv, która przetrzymuje wszystkie argumenty programu. Dopiszmy więc do naszego skryptu wykorzystanie argv i zobaczmy, co kotek ma w środku.
@@ -40,6 +49,7 @@ def customized_hello(first_name, last_name):
 
 if __name__ == "__main__":
     print(sys.argv[1:])
+    print(sys.argv)
     customized_hello("John","Cleese")
 """
 

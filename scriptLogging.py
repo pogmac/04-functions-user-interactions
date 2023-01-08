@@ -3,15 +3,16 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s')
 
-def extended_welcome(firstname, lastname):
-    logging.info("Hello %s %s!" % (firstname, lastname))
+def extended_welcome(firstname, lastname, age):
+    logging.info("Hello %s %s age %d!" % (firstname, lastname, age))
 
 if __name__ == "__main__":
     logging.debug("This program was called with parameters %s" % sys.argv[1:])      
     logging.debug("First parameter is %s" % sys.argv[1])
     firstname = sys.argv[1]
     lastname = sys.argv[2]
-    extended_welcome(firstname,lastname)
+    age = float(sys.argv[3])
+    extended_welcome(firstname,lastname, age)
 
 
 
